@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --r-heading1-size: 2em;
+}
+
+#root,
+body {
+  @apply h-full w-full bg-black;
+}
+
+.reveal {
+  .slides {
+    @apply overflow-hidden;
+    img {
+      @apply m-0 max-w-full;
+    }
+  }
+
+  .slides,
+  section {
+    @apply bg-white;
+  }
+
+  &.overview .slides {
+    @apply overflow-visible;
+  }
+}

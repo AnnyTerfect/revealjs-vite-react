@@ -1,0 +1,22 @@
+:global(.fragment) {
+  &:global(.visible) {
+    .path {
+      stroke-dashoffset: 0 !important;
+    }
+
+    .arrow {
+      visibility: visible;
+      offset-distance: 100%;
+    }
+  }
+  .path {
+    transition-duration: var(--transition-duration) !important;
+    transition-timing-function: ease-in-out !important;
+  }
+
+  .arrow {
+    offset-path: var(--animate-path);
+    offset-distance: 0%;
+    transition: offset-distance var(--transition-duration) ease-in-out;
+  }
+}
