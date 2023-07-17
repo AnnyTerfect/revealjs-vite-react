@@ -1,6 +1,9 @@
 # Revealjs + React + Vite boilerplate
 
-![Revealjs](public/images/reveal-symbol.svg)![Reactjs](images/react-icon.svg)
+<div align="center">
+  <img width="30%" src="public/images/reveal-symbol.svg" />
+  <img width="30%" src="images/react-icon.svg" />
+</div>
 
 ## Usage
 
