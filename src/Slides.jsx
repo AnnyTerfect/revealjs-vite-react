@@ -7,23 +7,24 @@ import Fragments from "./components/Slides/Fragments";
 import Conclusion from "./components/Slides/Conclusion";
 import TextFrame from "./components/Slides/TextFrame";
 import TwoCols from "./components/Slides/TwoCols";
+import Transition from "./components/Slides/Transition";
 
 function Slides() {
   return (
-    <>
+    <Transition>
       <Page title="Slide 1.1">
         <Fragments transitionClass="fade-up">
           <p>This is the content of slide 1. haha</p>
           <p>haha</p>
           <div>
-            We have that <InlineEquation>y = kx + b</InlineEquation>
+              We have that <InlineEquation>y = kx + b</InlineEquation>
           </div>
           <Theorem>
-            Suppose that you have an{" "}
+              Suppose that you have an{" "}
             <InlineEquation>{`f \\in \\mathcal{F}`}</InlineEquation>.
           </Theorem>
           <Conclusion size="10" className="mt-4">
-            haha
+              haha
           </Conclusion>
         </Fragments>
       </Page>
@@ -55,12 +56,12 @@ function Slides() {
         <TwoCols
           left={
             <p className="w-full h-[400px] border-2 border-black">
-              This shows on the left.
+                This shows on the left.
             </p>
           }
           right={
             <p className="w-full h-[400px] border-2 border-black">
-              This shows on the right.
+                This shows on the right.
             </p>
           }
         />
@@ -71,12 +72,12 @@ function Slides() {
         <TwoCols
           left={
             <p className="pt-20 w-full h-[400px] border-2 border-black">
-              This shows on the left.
+                This shows on the left.
             </p>
           }
           right={
             <p className="w-full h-[400px] border-2 border-black">
-              This shows on the right.
+                This shows on the right.
             </p>
           }
         />
@@ -85,7 +86,7 @@ function Slides() {
       <Page title="Slide 3" data-auto-animate="">
         <p data-id="comment">This is the content of slide 3.</p>
       </Page>
-    </>
+    </Transition>
   );
 }
 
