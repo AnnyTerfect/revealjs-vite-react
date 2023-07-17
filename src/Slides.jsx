@@ -6,6 +6,7 @@ import Theorem from "./components/Theorem";
 import Conclusion from "./components/Conclusion";
 import AnimatePath from "./components/AnimatePath";
 import TextFrame from "./components/TextFrame";
+import TwoCols from "./components/TwoCols";
 
 function Slides() {
   return (
@@ -18,7 +19,8 @@ function Slides() {
             We have that <InlineEquation>y = kx + b</InlineEquation>
           </div>
           <Theorem>
-            Suppose that you have an <InlineEquation>{`f \\in \\mathcal{F}`}</InlineEquation>.
+            Suppose that you have an{" "}
+            <InlineEquation>{`f \\in \\mathcal{F}`}</InlineEquation>.
           </Theorem>
           <Conclusion size="10" className="mt-4">
             haha
@@ -45,13 +47,23 @@ function Slides() {
 
       <Page title="Slide 2" data-transition="zoom">
         <p>This is the content of slide 2.</p>
-        <TextFrame className="text-center rounded-md">
-          haha
-        </TextFrame>
+        <TextFrame className="text-center rounded-md">haha</TextFrame>
       </Page>
 
-      <Page title="Slide 2" data-transition="zoom">
-        <p className="w-full h-full">This is the content of slide 2.</p>
+      <Page title="Two Columns" data-transition="zoom">
+        <p className="">This is the content of slide 2.</p>
+        <TwoCols
+          left={
+            <p className="w-full h-[400px] border-2 border-black">
+              This shows on the left.
+            </p>
+          }
+          right={
+            <p className="w-full h-[400px] border-2 border-black">
+              This shows on the right.
+            </p>
+          }
+        />
       </Page>
 
       <Page title="Slide 2" data-transition="zoom">
