@@ -1,10 +1,10 @@
 import React from "react";
 import Page from "./components/Slides/Page";
-import Fragments from "./components/Slides/Fragments";
+import AnimatePath from "./components/Draw/AnimatePath";
 import InlineEquation from "./components/Math/InlineEquation";
 import Theorem from "./components/Math/Theorem";
+import Fragments from "./components/Slides/Fragments";
 import Conclusion from "./components/Slides/Conclusion";
-import AnimatePath from "./components/Draw/AnimatePath";
 import TextFrame from "./components/Slides/TextFrame";
 import TwoCols from "./components/Slides/TwoCols";
 
