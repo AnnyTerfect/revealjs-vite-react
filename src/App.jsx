@@ -14,6 +14,7 @@ function App() {
       margin: 0,
       center: false,
       controls: false,
+      progress: false,
     });
     Reveal.on("slidechanged", (event) => {
       setPage(event.indexh);
