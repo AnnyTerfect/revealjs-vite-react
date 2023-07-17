@@ -50,7 +50,7 @@ function Slides() {
         <TextFrame className="text-center rounded-md">haha</TextFrame>
       </Page>
 
-      <Page title="Two Columns" data-transition="zoom">
+      <Page title="Two Columns" data-auto-animate="">
         <p className="">This is the content of slide 2.</p>
         <TwoCols
           left={
@@ -66,8 +66,24 @@ function Slides() {
         />
       </Page>
 
-      <Page title="Slide 2" data-transition="zoom">
-        <p className="w-full h-full">This is the content of slide 2.</p>
+      <Page title="Slide 2" data-auto-animate="">
+        <p data-id="comment">This is the content of slide 2.</p>
+        <TwoCols
+          left={
+            <p className="pt-20 w-full h-[400px] border-2 border-black">
+              This shows on the left.
+            </p>
+          }
+          right={
+            <p className="w-full h-[400px] border-2 border-black">
+              This shows on the right.
+            </p>
+          }
+        />
+      </Page>
+
+      <Page title="Slide 3" data-auto-animate="">
+        <p data-id="comment">This is the content of slide 3.</p>
       </Page>
     </>
   );
