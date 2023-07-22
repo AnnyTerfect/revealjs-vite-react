@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Reveal from "reveal.js";
+import PageNumberProvider from "./components/Provider/PageNumber";
 import CoverPage from "./meta/CoverPage";
 import Slides from "./Slides";
+import Pagination from "./components/Slides/Pagination";
 
 function App() {
-  const [page, setPage] = useState(0);
-
   useEffect(() => {
     window.Reveal = Reveal;
     Reveal.initialize({
@@ -16,21 +16,16 @@ function App() {
       controls: false,
       progress: false,
     });
-    Reveal.on("slidechanged", (event) => {
-      setPage(event.indexh);
-    });
   }, []);
 
   return (
     <div className="reveal">
       <div className="slides !text-left">
-        <CoverPage title="This Is a Test Title" author="Qin-Cheng Zheng" />
-        <Slides />
-        {page > 0 && (
-          <div className="absolute right-4 bottom-4 z-50">
-            {page} / {Reveal.getTotalSlides() - 1}
-          </div>
-        )}
+        <PageNumberProvider>
+          <CoverPage title="This Is a Test Title" author="Qin-Cheng Zheng" />
+          <Slides />
+          <Pagination />
+        </PageNumberProvider>
       </div>
     </div>
   );
