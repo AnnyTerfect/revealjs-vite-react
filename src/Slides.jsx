@@ -1,7 +1,20 @@
 import React from "react";
 import { AnimatePath } from "./components/Draw";
-import { Equation, InlineEquation, Matrix, Theorem } from "./components/Math";
-import { Fragments, Conclusion, Page, TextFrame, TwoCols, Transition } from "./components/Slides";
+import {
+  Align,
+  Equation,
+  InlineEquation,
+  Matrix,
+  Theorem,
+} from "./components/Math";
+import {
+  Fragments,
+  Conclusion,
+  Page,
+  TextFrame,
+  TwoCols,
+  Transition,
+} from "./components/Slides";
 
 function Slides() {
   return (
@@ -79,13 +92,21 @@ function Slides() {
 
       <Page title="Slide 3" data-auto-animate="">
         <Equation>
-          <Matrix
-            elements={[
+          <Matrix>
+            {[
               ["a", "b", "c", "1"],
               ["d", "e", "f", "2"],
               ["g", "h", "i", "3"],
             ]}
-          />
+          </Matrix>
+        </Equation>
+        <Equation>
+          <Align>
+            {[
+              ["y = kx + b", "y = ax^{2} + bx + c"],
+              ["y = kx + b", "y = ax^{2} + bx + c"],
+            ]}
+          </Align>
         </Equation>
         <p data-id="comment">This is the content of slide 3.</p>
       </Page>
