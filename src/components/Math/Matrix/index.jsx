@@ -1,4 +1,4 @@
-function Matrix(elements) {
+function Matrix({ elements }) {
   return `\\begin{matrix}
     ${elements.map((row) => (
     row.join('&')
