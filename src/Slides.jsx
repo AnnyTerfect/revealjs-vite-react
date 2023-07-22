@@ -1,15 +1,7 @@
 import React from "react";
-import Page from "./components/Slides/Page";
-import AnimatePath from "./components/Draw/AnimatePath";
-import Equation from "./components/Math/Equation";
-import InlineEquation from "./components/Math/InlineEquation";
-import Matrix from "./components/Math/Matrix";
-import Theorem from "./components/Math/Theorem";
-import Fragments from "./components/Slides/Fragments";
-import Conclusion from "./components/Slides/Conclusion";
-import TextFrame from "./components/Slides/TextFrame";
-import TwoCols from "./components/Slides/TwoCols";
-import Transition from "./components/Slides/Transition";
+import { AnimatePath } from "./components/Draw";
+import { Equation, InlineEquation, Matrix, Theorem } from "./components/Math";
+import { Fragments, Conclusion, Page, TextFrame, TwoCols, Transition } from "./components/Slides";
 
 function Slides() {
   return (
