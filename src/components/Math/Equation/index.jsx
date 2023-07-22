@@ -1,5 +1,6 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
+import decodeHtmlEntities from "../../../utils";
 import "mathjax-full/es5/tex-svg-full";
 
 function Equation({ children, ...props }) {
