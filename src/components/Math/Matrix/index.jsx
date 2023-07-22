@@ -1,6 +1,6 @@
-function Matrix({ elements }) {
+function Matrix({ children }) {
   return `\\begin{matrix}
-    ${elements.map((row) => (
+    ${children.map((row) => (
     row.join('&')
   )).join('\\\\')}
   \\end{matrix}`;
