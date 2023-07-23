@@ -3,9 +3,9 @@ import njuLogo from "../../assets/images/nju.png";
 import lamdaLogo from "../../assets/images/lamda.png";
 import njuBottomLogo from "../../assets/images/nju-bottom.png";
 
-function CoverPage({ title, titleSize=8, author, authorSize=1.5 }) {
+function CoverPage({ title, titleSize=8, author, authorSize=1.5, ...props }) {
   return (
-    <section className="h-full">
+    <section className="h-full" {...props}>
       <div className="h-full flex flex-col justify-center items-center">
         <h1 className="my-0 mx-5" style={{
           fontSize: `${titleSize}rem`,

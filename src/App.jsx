@@ -9,7 +9,11 @@ function App() {
   return (
     <RevealContainer>
       <PageNumberProvider>
-        <CoverPage title="This Is a Test Title" author="Qin-Cheng Zheng" />
+        <CoverPage
+          title="This Is a Test Title"
+          author="Qin-Cheng Zheng"
+          data-transition="fade"
+        />
         <Slides />
         <Pagination />
       </PageNumberProvider>
